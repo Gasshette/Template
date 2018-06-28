@@ -23,7 +23,6 @@ const getPathTokens = (pathname) => {
 function getRouteMatch(routes, path) {
   return Object.keys(routes)
     .map((key) => {
-      // console.log('newRoute = {0} et path = {1}', newRoute, path);
       const params = new Route(key).match(path);
       return {
         didMatch: params !== false,
